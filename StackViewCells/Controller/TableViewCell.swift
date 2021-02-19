@@ -1,22 +1,31 @@
 //
-//  ViewController.swift
+//  TableViewCell.swift
 //  StackViewCells
 //
-//  Created by Benjamin Inemugha on 18/02/2021.
+//  Created by Benjamin Inemugha on 19/02/2021.
 //  Copyright © 2021 Techelope. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    var data = ["Daddy", "Mummy", "Ben"]
+class TableViewCell: UITableViewCell {
+
 
     @IBOutlet weak var itemStack: UIStackView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var tableViewLbl: UILabel!
+    
+    var data = ["Daddy", "Mummy", "Olans", "Tare", "Bomane", "Daniel", "Me"]
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
         SetupDisplay()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
     func SetupDisplay(){
@@ -39,4 +48,5 @@ class ViewController: UIViewController {
         }
 
     }
+    
 }
