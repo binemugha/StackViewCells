@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var data = ["Daddy", "Mummy", "Ben"]
+    var data = ["Daddy", "Mummy", "You", "Thank you GitHub"]
 
     @IBOutlet weak var itemStack: UIStackView!
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             
             itemView.pricetxt.text = "1000"
             
-            itemView.mainTxt.text = "My Drugs"
+            itemView.mainTxt.text = "Thank you for support"
             itemStack.addArrangedSubview(itemView)
         }
 
