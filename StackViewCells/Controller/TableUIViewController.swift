@@ -14,7 +14,7 @@ class TableUIViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     var data = ["Drugs", "Money"]
-    var name = ["Paracetamol", "Dollars"]
+    var name = [["Paracetamol", "Dollars","Queens", ["Boys", "Men", "Children"]], ["Paracetamol1", "Dollars1","Queens1", ["Boys1", "Men1", "Children1"]]]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,12 +25,13 @@ class TableUIViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return name.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell {
-            cell.tableViewLbl.text = name[indexPath.row]
+            print("\(#function) --- section = \(indexPath.section), row = \(indexPath.row)")
+            cell.tableViewLbl.text = name[indexPath.row][2] as? String
             return cell
         }
         return UITableViewCell()
