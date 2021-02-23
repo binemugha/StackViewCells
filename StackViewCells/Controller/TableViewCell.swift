@@ -13,6 +13,7 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var itemStack: UIStackView!
     @IBOutlet weak var tableViewLbl: UILabel!
+    //@IBOutlet weak var itemStatus: UILabel!
     
     var data = ["Daddy", "Mummy", "Olans", "Tare", "Bomane", "Daniel", "Me"]
     

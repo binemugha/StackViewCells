@@ -31,6 +31,7 @@ class TableUIViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //return data.count
         //return name.count
+        //print(bigdata[0].pharmacy_items.count)
         return bigdata.count
     }
     
@@ -44,6 +45,7 @@ class TableUIViewController: UIViewController, UITableViewDelegate, UITableViewD
             //cell.tableViewLbl.text = data[indexPath.row]
             //cell.tableViewLbl.text = name[indexPath.row][1] as? String
             cell.tableViewLbl.text = bigdata[indexPath.section].name
+            //cell.itemStatus.text = bigdata[indexPath.section].pharmacy_items[indexPath.section].fulfillment_status
             return cell
         }
         return UITableViewCell()
